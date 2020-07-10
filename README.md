@@ -15,7 +15,7 @@
     <br>
     <div style="color: #999;
     font-size:11px;
-    padding: 2px;">Fig1. Machine Learning Lab</div>
+    padding: 2px;">Fig0. Machine Learning Lab</div>
 </center>
 
 
@@ -1189,5 +1189,6 @@ tensorboardX的展示界面如图所示。
 8. https://github.com/4uiiurz1/pytorch-nested-unet
 9. Minaee S , Boykov Y , Porikli F , et al. Image Segmentation Using Deep Learning: A Survey[J]. 2020.
 10. Guo Y , Liu Y , Georgiou T , et al. A review of semantic segmentation using deep neural networks[J]. International Journal of Multimedia Information Retrieval, 2017.
+11. https://github.com/fabioperez/pytorch-examples/
 
 
