@@ -257,6 +257,8 @@ $K=k+(k-1)(a-1)$
 </div>
 
 ### 2.5 后处理技术
+
+
 <div style="text-align: justify">
 早期语义分割模型效果较为粗糙，在没有更好的特征提取模型的情况下，研究者们便在神经网络模型的粗糙结果进行后处理（Post-Processing），主要方法就是一些常用的概率图模型，比如说条件随机场（Conditional Random Field,CRF）和马尔可夫随机场（Markov Random Field,MRF）。
 
