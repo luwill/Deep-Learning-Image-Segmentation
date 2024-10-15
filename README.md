@@ -7,16 +7,6 @@
 
 **v1.0 louwill**<br>
 **Machine Learning Lab**
-</center>
-<center>
-    <img 
-    src="https://github.com/luwill/louwill-python-learning/raw/master/qrcode.jpg"
-    width = "300" height = "300">
-    <br>
-    <div style="color: #999;
-    font-size:11px;
-    padding: 2px;">Fig0. Machine Learning Lab</div>
-</center>
 
 
 <br>
