@@ -1,7 +1,7 @@
 <center>
 
- # **深度学习语义分割理论与实战指南**
- # A Theory and Practical Guide to Deep Learning Semantic Segmentation
+ # **深度学习图像分割**
+ # Deep Learning Image Segmentation
 </center>
 <center>
 
