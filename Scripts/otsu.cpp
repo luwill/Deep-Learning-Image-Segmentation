@@ -28,7 +28,6 @@ int main() {
 
     // Step 3: 保存分割结果
     imwrite("./otsu_result.png", otsu_result);
-    cout << "Otsu分割结果已保存为otsu_result.png" << endl;
 
     // 等待用户按键关闭窗口
     waitKey(0);
