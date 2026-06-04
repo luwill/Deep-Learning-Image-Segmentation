@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+# 来源：《深度学习图像分割》第 13 章 — 代码 13-14 相对于此前版本有 7 项关键修订：① BGR → RGB 通道顺序对齐 Python 训练端 PIL 的 `convert('RGB')`；② 先 resize 后 convertTo（cubic 插值在 uint8 上更稳，避免 float32 上的过冲）；③/④/⑤ 三步对齐 Python 端 `Normalize(mean=ImageNet_mean, std=ImageNet_std)` 归一化——这一步是与训练流水线对齐**最容易被忽略**的部分；⑥ `from_blob` 显式指定 `dtype=kFloat32` 并 `.clone()` 脱离 `cv::Mat` 生命周期；⑦ 后处理用 `sigmoid + (>0.5)` 显式阈值化，避免 `cv::normalize 0–255` 在健康样本（全负 logit）上拉伸产生伪病灶。
+# 原始位置：book-review/drafts/ch13-v4.md:1219
+# 本文件由 book-review/scripts/extract_code.py 自动抽取生成。
+# 修改请回写源稿后重新生成，避免代码与书稿失同步。
+# 代码 13-15 2D 医学影像部署的 CMakeLists 文件
+cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+project(deployment)
+
+find_package(OpenCV REQUIRED)
+
+# 指向 libtorch 安装目录
+list(APPEND CMAKE_PREFIX_PATH "../libtorch")
+find_package(Torch REQUIRED)
+
+add_executable(deployment deployment.cpp)
+target_link_libraries(deployment "${TORCH_LIBRARIES}" ${OpenCV_LIBS})
+set_property(TARGET deployment PROPERTY CXX_STANDARD 17)

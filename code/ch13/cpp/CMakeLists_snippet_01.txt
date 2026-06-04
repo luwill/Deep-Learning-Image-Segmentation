@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# 来源：《深度学习图像分割》第 13 章 — (无标号片段)
+# 原始位置：book-review/drafts/ch13-v4.md:1065
+# 本文件由 book-review/scripts/extract_code.py 自动抽取生成。
+# 修改请回写源稿后重新生成，避免代码与书稿失同步。
+# 代码 13-10 编写 CMakeLists 文件
+cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+project(custom_ops)
+
+find_package(Torch REQUIRED)
+
+add_executable(example-app example-app.cpp)
+target_link_libraries(example-app "${TORCH_LIBRARIES}")
+set_property(TARGET example-app PROPERTY CXX_STANDARD 17)
